@@ -1,0 +1,14 @@
+
+
+DTO  - ei ole Component,
+*** väljad ei pea olema private
+võiamlikult lihtne klass, ilma setters
+Tühi vaikimisi konstuktor kaob ära, kui on defineeritud teine.
+
+***
+
+TODO Service klass, kus on 2 meetodit:
+1 tagastab paaritud arvud, teine - paaris
+Annotatsioone mitte kasutada, Singletone patterni järgiv klass.
+
+

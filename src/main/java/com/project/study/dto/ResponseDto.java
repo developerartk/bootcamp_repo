@@ -1,14 +1,18 @@
 package com.project.study.dto;
 
+import lombok.NoArgsConstructor;
 
-import org.springframework.stereotype.Component;
-
-@Component
+@NoArgsConstructor
 public class ResponseDto {
-    private String greeting = "Hello, World!";
-    private Long responseId = 1L;
 
+    public String name;
 
-    public Long responseNr = responseId;
-    public String message = greeting;
+    public ResponseDto(String name) {
+        this.name = name;
+    }
 }
+
+// DTO  - ei ole Component,
+//*** väljad ei pea olema private
+// võiamlikult lihtne klass, ilma setters
+// Tühi vaikimisi konstuktor kaob ära, kui on defineeritud teine.
