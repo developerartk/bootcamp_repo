@@ -11,4 +11,5 @@ TODO Service klass, kus on 2 meetodit:
 1 tagastab paaritud arvud, teine - paaris
 Annotatsioone mitte kasutada, Singletone patterni järgiv klass.
 
-
+TODO
+meetod, mis saab Array Int, leida numbri, mis ei kordu

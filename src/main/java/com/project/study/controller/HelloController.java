@@ -37,6 +37,22 @@ public class HelloController {
         NumberSelectorService numberSelectorService = NumberSelectorService.getInstance();
         return numberSelectorService.getEven(listOfNumbers);
     }
+
+    @GetMapping("/repNumber")
+    @Description(value = "Finds repeating number in list")
+    public int findRepeatingNumber(@RequestBody List<Integer> listOfNumbers) {
+        NumberSelectorService numberSelectorService = NumberSelectorService.getInstance();
+        return numberSelectorService.findRepeatingNumber(listOfNumbers);
+    }
+
+    @GetMapping("/uniqueNumber")
+    @Description(value = "Finds repeating number in list")
+    public List<Integer> findUniqueNumber(@RequestBody List<Integer> listOfNumbers) {
+        NumberSelectorService numberSelectorService = NumberSelectorService.getInstance();
+        return numberSelectorService.findUniqueNumber(listOfNumbers);
+    }
+
+
 }
 
 
