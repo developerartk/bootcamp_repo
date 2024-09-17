@@ -1,14 +1,11 @@
 package com.project.study.service;
 
-import java.sql.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
-import java.util.stream.Collector;
+import java.util.Map;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class NumberSelectorService {
 
@@ -48,6 +45,27 @@ public class NumberSelectorService {
             }
         }
         return 0;
+    }
+
+    public static void main(String[] args) {
+        List<Integer> listOfNumbers = new ArrayList<>(List.of(1,5,3,5,3,1,9,7,9,7,20));
+
+        System.out.println(NumberSelectorService.getInstance().findUniqueNumberExtra(listOfNumbers));
+
+    }
+    public Integer findUniqueNumberExtra(List<Integer> listOfNumbers) {
+        Collections.sort(listOfNumbers);
+        System.out.println(listOfNumbers);
+
+        Map<Integer, Integer> numbersMap = new HashMap<>();
+
+        for (int i = 0; i < listOfNumbers.size(); i++) {
+            if (!numbersMap.containsKey(listOfNumbers.get(i))) {
+                numbersMap.put(listOfNumbers.get(i), 1);
+            } else {
+                numbersMap.put(listOfNumbers.get(i), numbersMap.get(listOfNumbers.get(i) + 1));
+            }
+        }
     }
 
     public List<Integer> findUniqueNumber(List<Integer> listOfNumbers) {

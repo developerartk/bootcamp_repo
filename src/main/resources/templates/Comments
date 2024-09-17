@@ -7,9 +7,9 @@ Tühi vaikimisi konstuktor kaob ära, kui on defineeritud teine.
 
 ***
 
-TODO Service klass, kus on 2 meetodit:
-1 tagastab paaritud arvud, teine - paaris
-Annotatsioone mitte kasutada, Singletone patterni järgiv klass.
-
 TODO
-meetod, mis saab Array Int, leida numbri, mis ei kordu
+HelloCOntroller korda
+Lisada autoriseerimine kahele kasutajale -> headerites kastuda user / parool
+user + admit
+getOdd ainult adminile;
++ hashima parooli
