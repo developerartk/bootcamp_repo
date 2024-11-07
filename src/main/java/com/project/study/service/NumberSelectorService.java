@@ -66,6 +66,16 @@ public class NumberSelectorService {
                 numbersMap.put(listOfNumbers.get(i), numbersMap.get(listOfNumbers.get(i) + 1));
             }
         }
+
+        int onlyUniqueNumber = 0;
+
+        for (Map.Entry<Integer, Integer> entry : numbersMap.entrySet()) {
+            if (entry.getValue() == 0) {
+                onlyUniqueNumber = entry.getKey();
+                return onlyUniqueNumber;
+            }
+        }
+        return onlyUniqueNumber;
     }
 
     public List<Integer> findUniqueNumber(List<Integer> listOfNumbers) {

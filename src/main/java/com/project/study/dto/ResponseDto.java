@@ -11,8 +11,3 @@ public class ResponseDto {
         this.name = name;
     }
 }
-
-// DTO  - ei ole Component,
-//*** väljad ei pea olema private
-// võiamlikult lihtne klass, ilma setters
-// Tühi vaikimisi konstuktor kaob ära, kui on defineeritud teine.
